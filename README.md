@@ -20,19 +20,14 @@ The application predicts a user's Mental Health Score based on their lifestyle, 
 
 ---
 
-## 📷 Project Preview
+## 🌐 Live Demo
 
-> Add screenshots of your application here.
+🚀 **Try the application here:**
 
-```
-Home Page
-
-Prediction Form
-
-Prediction Result
-```
+**Website:** https://your-website-url.com
 
 ---
+
 
 ## 🛠️ Tech Stack
 
