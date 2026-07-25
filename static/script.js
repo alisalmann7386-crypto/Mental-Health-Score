@@ -69,7 +69,7 @@ form.addEventListener("submit", async function(e){
             throw new Error("Prediction Failed");
 
         }
-
+        const result = await response.json();
         const rawScore = result["Predicted Mental Health Score"];
 
         const score = rawScore * 10;
