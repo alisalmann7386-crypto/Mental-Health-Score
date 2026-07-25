@@ -70,11 +70,11 @@ form.addEventListener("submit", async function(e){
 
         }
 
-        const result=await response.json();
+        const rawScore = result["Predicted Mental Health Score"];
 
-        const score=result["Predicted Mental Health Score"];
-
-        prediction.innerHTML=score.toFixed(2);
+        const score = rawScore * 10;
+        
+        prediction.innerHTML = score.toFixed(1) + "/100";
 
         if(score>=80){
 
