@@ -24,7 +24,7 @@ The application predicts a user's Mental Health Score based on their lifestyle, 
 
 🚀 **Try the application here:**
 
-**Website:** https://your-website-url.com
+**Website:** https://mental-health-score-1-8e6g.onrender.com
 
 ---
 
