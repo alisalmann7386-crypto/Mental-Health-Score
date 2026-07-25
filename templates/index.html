@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Mental Health Predictor</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background-circle circle1"></div>
+<div class="background-circle circle2"></div>
+<div class="background-circle circle3"></div>
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <span>MindAI</span>
+
+        </div>
+
+        <div class="menu">
+
+            <a href="#">Home</a>
+            <a href="#">Predict</a>
+            <a href="#">About</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="badge">
+
+            🤖 Machine Learning Powered
+
+        </span>
+
+        <h1>
+
+            AI Mental Health
+            <span>Score Predictor</span>
+
+        </h1>
+
+        <p>
+
+            Analyze your digital lifestyle and receive an AI-generated
+            Mental Health Score using Machine Learning.
+
+        </p>
+
+        <div class="hero-features">
+
+            <div>
+
+                <i class="fa-solid fa-shield-heart"></i>
+
+                Secure
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-bolt"></i>
+
+                Fast Prediction
+
+            </div>
+
+            <div>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                AI Insights
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="brain-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="container">
+
+<form id="predictionForm">
+
+<div class="glass-card">
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Personal Information
+
+</h2>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>
+
+<i class="fa-solid fa-user"></i>
+
+Age
+
+</label>
+
+<input
+type="range"
+id="Age"
+min="10"
+max="80"
+value="22"
+oninput="ageValue.innerText=this.value">
+
+<span id="ageValue">22</span>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+<i class="fa-solid fa-venus-mars"></i>
+
+Gender
+
+</label>
+
+<select id="Gender">
+
+<option value="">Select Gender</option>
+
+<option>Male</option>
+
+<option>Female</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="input-box">
+
+<label>
+
+<i class="fa-solid fa-earth-asia"></i>
+
+Country
+
+</label>
+
+<select id="Grouped_country">
+
+<option value="">Choose Country</option>
+
+<option>India</option>
+
+<option>USA</option>
+
+<option>Canada</option>
+
+<option>Australia</option>
+
+<option>UK</option>
+
+<option>Germany</option>
+
+<option>Mexico</option>
+
+<option>Turkey</option>
+
+<option>France</option>
+
+<option>Spain</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="input-box">
+
+<label>
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+Academic Level
+
+</label>
+
+<select id="Academic_Level">
+
+<option value="">Select Level</option>
+
+<option>High School</option>
+
+<option>Undergraduate</option>
+
+<option>Graduate</option>
+
+</select>
+
+</div>
+
+</div>
+
+</div>
+<!-- ===========================
+SOCIAL MEDIA USAGE CARD
+=========================== -->
+
+<div class="glass-card">
+
+    <h2>
+
+        <i class="fa-solid fa-mobile-screen-button"></i>
+
+        Social Media Usage
+
+    </h2>
+
+    <div class="row">
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-brands fa-instagram"></i>
+
+                Most Used Platform
+
+            </label>
+
+            <select id="Most_Used_Platform">
+
+                <option value="">Choose Platform</option>
+
+                <option>Instagram</option>
+
+                <option>TikTok</option>
+
+                <option>Facebook</option>
+
+                <option>LinkedIn</option>
+
+                <option>YouTube</option>
+
+                <option>Twitter</option>
+
+                <option>Snapchat</option>
+
+                <option>WhatsApp</option>
+
+                <option>LINE</option>
+
+                <option>VKontakte</option>
+
+                <option>KakaoTalk</option>
+
+                <option>WeChat</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-bullseye"></i>
+
+                Purpose of Use
+
+            </label>
+
+            <select id="Purpose_Of_Use">
+
+                <option value="">Select Purpose</option>
+
+                <option>Entertainment</option>
+
+                <option>Education</option>
+
+                <option>Networking</option>
+
+                <option>News</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-clock"></i>
+
+                Average Daily Usage
+
+            </label>
+
+            <input
+
+                type="range"
+
+                min="0"
+
+                max="24"
+
+                step="0.5"
+
+                value="5"
+
+                id="Avg_Daily_Usage_Hours"
+
+                oninput="usageValue.innerHTML=this.value + ' hrs'">
+
+            <span id="usageValue">5 hrs</span>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-lock-open"></i>
+
+                Daily Unlocks
+
+            </label>
+
+            <input
+
+                type="range"
+
+                min="0"
+
+                max="300"
+
+                value="60"
+
+                id="Daily_Unlocks"
+
+                oninput="unlockValue.innerHTML=this.value">
+
+            <span id="unlockValue">60</span>
+
+        </div>
+
+    </div>
+
+    <div class="stats-row">
+
+        <div class="mini-card">
+
+            <i class="fa-solid fa-fire"></i>
+
+            <h3>Healthy Usage</h3>
+
+            <p>2 - 4 hrs/day</p>
+
+        </div>
+
+        <div class="mini-card">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+            <h3>Average Unlocks</h3>
+
+            <p>40 - 80/day</p>
+
+        </div>
+
+        <div class="mini-card">
+
+            <i class="fa-solid fa-heart-circle-check"></i>
+
+            <h3>Digital Balance</h3>
+
+            <p>Maintain Screen Time</p>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- ==========================================
+LIFESTYLE & WELLNESS
+========================================== -->
+
+<div class="glass-card">
+
+    <h2>
+
+        <i class="fa-solid fa-heart-pulse"></i>
+
+        Lifestyle & Wellness
+
+    </h2>
+
+    <div class="row">
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-book-open"></i>
+
+                Study Hours
+
+            </label>
+
+            <input
+
+                type="range"
+
+                min="0"
+
+                max="15"
+
+                step="0.5"
+
+                value="5"
+
+                id="Study_Hours"
+
+                oninput="studyValue.innerHTML=this.value + ' hrs'">
+
+            <span id="studyValue">5 hrs</span>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-person-running"></i>
+
+                Physical Activity
+
+            </label>
+
+            <input
+
+                type="range"
+
+                min="0"
+
+                max="8"
+
+                step="0.5"
+
+                value="2"
+
+                id="Physical_Activity_Hours"
+
+                oninput="activityValue.innerHTML=this.value + ' hrs'">
+
+            <span id="activityValue">2 hrs</span>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-bed"></i>
+
+                Sleep Hours
+
+            </label>
+
+            <input
+
+                type="range"
+
+                min="3"
+
+                max="12"
+
+                step="0.5"
+
+                value="7"
+
+                id="Sleep_Hours_Per_Night"
+
+                oninput="sleepValue.innerHTML=this.value + ' hrs'">
+
+            <span id="sleepValue">7 hrs</span>
+
+        </div>
+
+        <div class="input-box">
+
+            <label>
+
+                <i class="fa-solid fa-face-tired"></i>
+
+                Stress Level
+
+            </label>
+
+            <select id="Stress_Level">
+
+                <option value="">Select Stress Level</option>
+
+                <option>Low</option>
+
+                <option>Medium</option>
+
+                <option>High</option>
+
+                <option>Very High</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+PREDICT BUTTON
+========================================== -->
+
+<div class="predict-section">
+
+    <button class="predict-btn" type="submit">
+
+        <i class="fa-solid fa-brain"></i>
+
+        Predict Mental Health Score
+
+    </button>
+
+</div>
+
+</form>
+
+<!-- ==========================================
+RESULT CARD
+========================================== -->
+
+<div id="result" class="result-card">
+
+    <div class="result-header">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <h2>Prediction Result</h2>
+
+    </div>
+
+    <div class="score-circle">
+
+        <span id="prediction">--</span>
+
+    </div>
+
+    <div class="status">
+
+        <h3 id="predictionTitle">
+
+            AI Analysis
+
+        </h3>
+
+        <p id="predictionText">
+
+            Your AI prediction will appear here after clicking the Predict button.
+
+        </p>
+
+    </div>
+
+    <div class="tips">
+
+        <h4>
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            Wellness Tips
+
+        </h4>
+
+        <ul>
+
+            <li>😴 Sleep 7–8 hours every night.</li>
+
+            <li>📱 Reduce unnecessary screen time.</li>
+
+            <li>🏃 Exercise for at least 30 minutes daily.</li>
+
+            <li>📚 Maintain a balance between studies and entertainment.</li>
+
+            <li>🧘 Practice meditation or mindfulness regularly.</li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- ==========================================
+FEATURES SECTION
+========================================== -->
+
+<section class="features">
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-brain"></i>
+
+        <h3>Machine Learning</h3>
+
+        <p>
+            Prediction powered using an optimized regression model.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        <h3>Instant Prediction</h3>
+
+        <p>
+            Get your Mental Health Score within seconds.
+        </p>
+
+    </div>
+
+    <div class="feature-card">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <h3>Private & Secure</h3>
+
+        <p>
+            Your information is processed only for prediction.
+        </p>
+
+    </div>
+
+</section>
+<!-- ==========================================
+ABOUT PROJECT
+========================================== -->
+
+<section class="about-section">
+
+    <div class="about-card">
+
+        <h2>
+            <i class="fa-solid fa-circle-info"></i>
+            About This Project
+        </h2>
+
+        <p>
+            This AI-powered Mental Health Predictor analyzes lifestyle,
+            social media usage, study habits, sleep, and stress level
+            to estimate a Mental Health Score using a Machine Learning model.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-item">
+                <i class="fa-solid fa-robot"></i>
+                <h3>Machine Learning</h3>
+                <p>Regression model trained on mental health data.</p>
+            </div>
+
+            <div class="about-item">
+                <i class="fa-solid fa-server"></i>
+                <h3>FastAPI</h3>
+                <p>High-performance backend with REST API.</p>
+            </div>
+
+            <div class="about-item">
+                <i class="fa-solid fa-code"></i>
+                <h3>Frontend</h3>
+                <p>HTML • CSS • JavaScript</p>
+            </div>
+
+            <div class="about-item">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h3>Prediction</h3>
+                <p>Real-time AI-generated mental health score.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+DEVELOPER CARD
+========================================== -->
+
+<section class="developer-section">
+
+    <div class="developer-card">
+
+        <div class="developer-image">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+        </div>
+
+        <div class="developer-details">
+
+            <h2>Developer</h2>
+
+            <h3>Md Salman Ali</h3>
+
+            <p>
+
+                B.Tech CSE (Data Science)
+
+                <br>
+
+                Jamia Millia Islamia
+
+            </p>
+
+            <div class="developer-skills">
+
+                <span>Python</span>
+
+                <span>Machine Learning</span>
+
+                <span>FastAPI</span>
+
+                <span>Scikit-Learn</span>
+
+                <span>HTML</span>
+
+                <span>CSS</span>
+
+                <span>JavaScript</span>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="https://github.com/alisalmann7386-crypto "target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/md-salman-ali-8a301a324" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="alisalmann7386@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h2>
+
+            <i class="fa-solid fa-brain"></i>
+
+            AI Mental Health Predictor
+
+        </h2>
+
+        <p>
+
+            Predict • Analyze • Improve
+
+        </p>
+
+        <div class="footer-icons">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <i class="fa-solid fa-brain"></i>
+
+            <i class="fa-solid fa-shield-heart"></i>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 Md Salman Ali
+
+            <br>
+
+            Built using FastAPI, Machine Learning & JavaScript
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="/static/script.js"></script>
+
+</body>
+
+</html>
