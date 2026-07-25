@@ -52,7 +52,7 @@ form.addEventListener("submit", async function(e){
 
     try{
 
-        const response=await fetch("https://mental-health-score-tq7r.onrender.com",{
+        const response=await fetch("https://mental-health-score-1-miq3.onrender.com",{
 
             method:"POST",
 
